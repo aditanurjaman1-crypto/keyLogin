@@ -1,3 +1,6 @@
+// listener
+document.getElementById("resetBtn").style.display = "none";
+
 // Firebase Config
 const firebaseConfig = {
   apiKey: "AIzaSyB78X7ICt026-btzB1eTtCOR-mH9Y-Q6D0",

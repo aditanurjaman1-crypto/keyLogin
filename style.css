@@ -14,7 +14,7 @@ body {
 /* Tombol */
 button {
     display: block; /* Biar tiap tombol di baris sendiri */
-    margin: 15px auto; /* Tengah & ada jarak antar tombol */
+    margin: 10px auto; /* Tengah & ada jarak antar tombol */
     padding: 12px 25px;
     background: linear-gradient(90deg, #0077ff, #00c3ff);
     border: none;
@@ -32,6 +32,11 @@ button:hover {
     box-shadow: 0 0 15px rgba(0, 195, 255, 0.7);
 }
 
+/* hide button reset */
+
+#resetBtn {
+    display: none;
+}
 
 #title {
     color: lightslategrey;
