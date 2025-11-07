@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Get Key System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- main utana -->
+<div class="main-button">
+    <h1>🔑 Get KeyLogin DX Generator</h1>
+    <button onclick="generateKey()">GET KEY</button>
+    <button onclick="restart()">reset key(admin)</button>
+</div>
+<!-- pop up -->
+<div id="popup">
+    <h2 id="title"></h2>
+    <p id="keyValue"></p>
+    <button onclick="copyButton()">COPY KEYS!</button>
+    <button onclick="closePopup()">OK</button>
+</div>
+
+<!-- Firebase (Compat Version) -->
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
