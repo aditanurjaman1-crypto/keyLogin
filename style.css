@@ -1,65 +1,89 @@
+/* === BODY === */
 body {
     background: 
-        linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),  /* lapisan gelap transparan */
-        url('https://files.catbox.moe/s0tnmj.jpg'); /* ganti dengan URL kamu */
+        linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+        url('https://files.catbox.moe/s0tnmj.jpg'); /* Ganti dengan URL kamu */
     background-size: cover;
     background-position: center;
-    color: white;
-    font-family: Arial, sans-serif;
-    text-align: center;
-    padding-top: 100px;
+    height: 100vh; /* penuh layar */
     margin: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* pusat vertikal */
+    text-align: center;
 }
 
-/* Tombol */
+/* === TITTLE === */
+h1 {
+    font-size: 28px;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    color: #00d0ff;
+    text-shadow: 0 0 12px rgba(0, 208, 255, 0.7);
+}
+
+/* === TOMBOL === */
 button {
-    display: block; /* Biar tiap tombol di baris sendiri */
-    margin: 10px auto; /* Tengah & ada jarak antar tombol */
-    padding: 12px 25px;
+    display: block;
+    margin: 15px auto;
+    padding: 12px 30px;
     background: linear-gradient(90deg, #0077ff, #00c3ff);
     border: none;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
     font-size: 18px;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 0 10px rgba(0, 119, 255, 0.4);
+    transition: all 0.25s ease;
+    box-shadow: 0 0 15px rgba(0, 195, 255, 0.4),
+                inset 0 0 10px rgba(255, 255, 255, 0.1);
 }
 
 button:hover {
     background: linear-gradient(90deg, #00a6ff, #00e0ff);
-    transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(0, 195, 255, 0.7);
+    transform: scale(1.07);
+    box-shadow: 0 0 25px rgba(0, 225, 255, 0.8),
+                inset 0 0 15px rgba(255, 255, 255, 0.15);
 }
 
-/* hide button reset */
-
+/* === RESET BUTTON (HIDE DEFAULT) === */
 #resetBtn {
     display: none;
 }
 
+/* === TEKS === */
 #title {
-    color: lightslategrey;
-    font-size: 18px;
+    color: #a0aec0;
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
 
 #keyValue {
-    color: lightskyblue;
-    font-size: 30px;
+    color: #00d4ff;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    text-shadow: 0 0 12px rgba(0, 195, 255, 0.8);
 }
-/* Popup */
+
+/* === POPUP === */
 #popup {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0.9);
-    background: rgba(25, 25, 25, 0.95);
-    padding: 30px;
-    border-radius: 10px;
-    border: 2px solid #00c3ff;
-    box-shadow: 0 0 20px rgba(0, 195, 255, 0.3);
-    width: 300px;
+    background: rgba(20, 20, 20, 0.95);
+    padding: 30px 25px;
+    border-radius: 15px;
+    border: 1.5px solid #00c3ff;
+    box-shadow: 0 0 30px rgba(0, 195, 255, 0.3);
+    width: 320px;
     text-align: center;
     animation: popupFade 0.3s ease forwards;
 }
@@ -73,5 +97,20 @@ button:hover {
     to {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 22px;
+    }
+    button {
+        width: 80%;
+        font-size: 16px;
+    }
+    #popup {
+        width: 85%;
+        padding: 20px;
     }
 }
